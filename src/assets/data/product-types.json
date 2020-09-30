@@ -1,0 +1,547 @@
+{
+    "main_category": [
+        {
+            "id": 0,
+            "name": "Молоко, сыр, яйца"
+        }
+    ],
+    "categories": [
+        {
+            "id": 1,
+            "name": "молоко"
+        },
+        {
+            "id": 2,
+            "name": "сыр"
+        },
+        {
+            "id": 3,
+            "name": "яйца"
+        }
+    ],
+    "filters" : [
+        {
+            
+        }
+    ],
+    "products": [
+        {
+            "id": 1,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Parmalat Natura Premium",
+            "desc": "ультрапастеризованное 3.5...",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/94/26/22694.jpeg",
+            "price": 79.9,
+            "rating": 5,
+            "rating_num": 151,
+            "delivery": "завтра",
+            "fresh_days": "189+",
+            "discount": true,
+            "price_discount": 59.9,
+            "discount_num": 25,
+            "brand": "Parmalat"
+          },
+          {
+            "id": 2,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Valio Eila Zero Lactose",
+            "desc": "ультрапастеризованное безлактозное 1.5% 1л",
+            "img": "https://static07.perekrestok.ru/src/product.file/list/image/33/56/175633.jpeg",
+            "price": 209.9,
+            "rating": 5,
+            "rating_num": 21,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false,
+            "brand": "Valio"
+          },
+          {
+            "id": 3,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Домик в деревне",
+            "desc": "Отборное пастеризованное 3.5-4.5% 930мл",
+            "img": "https://static06.perekrestok.ru/src/product.file/list/image/86/61/216186.jpeg",
+            "price": 74.9,
+            "rating": 4,
+            "rating_num": 189,
+            "delivery": "завтра",
+            "fresh_days": "7+",
+            "discount": false,
+            "brand": "Домик в деревне"
+          },
+          {
+            "id": 4,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Простоквашино",
+            "desc": "Отборное пастеризованное 3.5-4.5% 930мл",
+            "img": "https://static01.perekrestok.ru/src/product.file/list/image/41/92/129241.jpeg",
+            "price": 69.9,
+            "rating": 4,
+            "rating_num": 522,
+            "delivery": "завтра",
+            "fresh_days": "6+",
+            "discount": false,
+            "brand": "Простоквашино"
+          },
+          {
+            "id": 5,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Простоквашино",
+            "desc": "ультрапастеризованное 3.2%",
+            "img": "https://static03.perekrestok.ru/src/product.file/list/image/80/83/118380.jpeg",
+            "price": 94.9,
+            "rating": 4,
+            "rating_num": 147,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false,
+            "brand": "Простоквашино"
+          },
+          {
+            "id": 6,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Сарафаново",
+            "desc": "ультрапастеризованное 2.5%",
+            "img": "https://static00.perekrestok.ru/src/product.file/list/image/52/57/175752.jpeg",
+            "price": 69.9,
+            "rating": 5,
+            "rating_num": 1,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false,
+            "brand": "Сарафаново"
+          },
+          {
+            "id": 7,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Угрече Поле",
+            "desc": "пастеризованное 3.5-5.2%",
+            "img": "https://static06.perekrestok.ru/src/product.file/list/image/73/66/116673.jpeg",
+            "price": 79.9,
+            "rating": 5,
+            "rating_num": 1,
+            "delivery": "завтра",
+            "fresh_days": "3+",
+            "discount": false,
+            "brand": "Угрече Поле"
+          },
+          {
+            "id": 8,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко ЭкоНива",
+            "desc": "пастеризованное 2.5% 1л",
+            "img": "https://static07.perekrestok.ru/src/product.file/list/image/77/20/182077.jpeg",
+            "price": 79.9,
+            "rating": 5,
+            "rating_num": 2,
+            "delivery": "завтра",
+            "fresh_days": "9+",
+            "discount": false,
+            "brand": "ЭкоНива"
+          },
+          {
+            "id": 9,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Молочная культура",
+            "desc": "пастеризованное 3.5-4.5% 1.8кг",
+            "img": "https://static03.perekrestok.ru/src/product.file/list/image/40/84/238440.jpeg",
+            "price": 174.9,
+            "rating": 5,
+            "rating_num": 3,
+            "delivery": "завтра",
+            "fresh_days": "7+",
+            "discount": false,
+            "brand": "Молочная культура"
+          },
+          {
+            "id": 10,
+            "product_type": {
+                "id": 1,
+                "name": "молоко"
+            },
+            "name": "Молоко Простоквашино",
+            "desc": "Отборное пастеризованное 3.4-4.5% 1.5л",
+            "img": "https://static00.perekrestok.ru/src/product.file/list/image/77/57/195777.jpeg",
+            "price": 119,
+            "rating": 5,
+            "rating_num": 1,
+            "delivery": "завтра",
+            "fresh_days": "6+",
+            "discount": true,
+            "price_discount": 89.9,
+            "discount_num": 24,
+            "brand": "Простоквашино"
+          },
+          {
+            "id": 11,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Российский",
+            "desc": "",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/77/69/36977.jpeg",
+            "price": 45.9,
+            "rating": 3,
+            "rating_num": 43,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": true,
+            "price_discount": 36.9,
+            "discount_num": 20
+          },
+          {
+            "id": 12,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Брест-Литовск",
+            "desc": "Классический 45% 150г",
+            "img": "https://static08.perekrestok.ru/src/product.file/list/image/77/35/223577.jpeg",
+            "price": 144.9,
+            "rating": 5,
+            "rating_num": 45,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 13,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Ламбер",
+            "desc": "Традиционный 50% 230г",
+            "img": "https://static06.perekrestok.ru/src/product.file/list/image/95/61/216195.jpeg",
+            "price": 279.9,
+            "rating": 5,
+            "rating_num": 48,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 14,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр плавленый Hochland",
+            "desc": "Сливочный 55% 400г",
+            "img": "https://static02.perekrestok.ru/src/product.file/list/image/42/52/165242.jpeg",
+            "price": 239.9,
+            "rating": 5,
+            "rating_num": 93,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 15,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Предгорье Кавказа",
+            "desc": "Адыгейский 45% 300г",
+            "img": "https://static04.perekrestok.ru/src/product.file/list/image/90/73/37390.jpeg",
+            "price": 259.9,
+            "rating": 4,
+            "rating_num": 12,
+            "delivery": "завтра",
+            "fresh_days": "22+",
+            "discount": false
+          },
+          {
+            "id": 16,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр плавленый Viola",
+            "desc": "Сливочный 50% 400г",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/34/42/104234.jpeg",
+            "price": 269.9,
+            "rating": 4,
+            "rating_num": 26,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": true,
+            "price_discount": 199.9,
+            "discount_num": 26
+          },
+          {
+            "id": 17,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Гиагинский Адыгейский",
+            "desc": "40% 300г",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/60/67/46760.jpeg",
+            "price": 219.9,
+            "rating": 5,
+            "rating_num": 27,
+            "delivery": "завтра",
+            "fresh_days": "30+",
+            "discount": false
+          },
+          {
+            "id": 18,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Arla Natura Сливочный",
+            "desc": "40% 400г",
+            "img": "https://static02.perekrestok.ru/src/product.file/list/image/62/38/103862.jpeg",
+            "price": 319.9,
+            "rating": 5,
+            "rating_num": 125,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 19,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Arla Natura сливочный",
+            "desc": "мягкий натуральный 60% 150г",
+            "img": "https://static04.perekrestok.ru/src/product.file/list/image/55/98/139855.jpeg",
+            "price": 124.9,
+            "rating": 5,
+            "rating_num": 10,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 19,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Bonfesto Маскарпоне 78% 250г",
+            "desc": "",
+            "img": "https://static07.perekrestok.ru/src/product.file/list/image/09/36/73609.jpeg",
+            "price": 259.9,
+            "rating": 5,
+            "rating_num": 7,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": true,
+            "price_discount": 199.9,
+            "discount_num": 23
+          },
+          {
+            "id": 20,
+            "product_type": {
+                "id": 2,
+                "name": "сыр"
+            },
+            "name": "Сыр Galbani Моцарелла 45% 125г",
+            "desc": "",
+            "img": "https://static01.perekrestok.ru/src/product.file/list/image/20/08/180820.jpeg",
+            "price": 159.9,
+            "rating": 4,
+            "rating_num": 37,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 21,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Лето С1 коричневые 20шт",
+            "desc": "",
+            "img": "https://static00.perekrestok.ru/src/product.file/list/image/25/75/177525.jpeg",
+            "price": 159.9,
+            "rating": 5,
+            "rating_num": 67,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 22,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Маркет Перекресток С0 коричневые 20шт",
+            "desc": "",
+            "img": "https://static01.perekrestok.ru/src/product.file/list/image/65/30/53065.jpeg",
+            "price": 59.9,
+            "rating": 5,
+            "rating_num": 42,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 23,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Роскар Экстра С0 коричневые 20шт",
+            "desc": "",
+            "img": "https://static06.perekrestok.ru/src/product.file/list/image/97/49/44997.jpeg",
+            "price": 89.9,
+            "rating": 4,
+            "rating_num": 44,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": true,
+            "price_discount": 69.9,
+            "discount_num": 22
+          },
+          {
+            "id": 24,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца С1 30шт цвет в ассортименте",
+            "desc": "",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/46/35/53546.jpeg",
+            "price": 149.9,
+            "rating": 4,
+            "rating_num": 43,
+            "delivery": "завтра",
+            "fresh_days": "17+",
+            "discount": false
+          },
+          {
+            "id": 25,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйцо цесариное La Ferme пищевое 10шт",
+            "desc": "",
+            "img": "https://static05.perekrestok.ru/src/product.file/list/image/45/22/102245.jpeg",
+            "price": 359.9,
+            "rating": 3,
+            "rating_num": 4,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 26,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Новая Марка С1 10шт",
+            "desc": "",
+            "img": "https://static00.perekrestok.ru/src/product.file/list/image/66/68/106866.jpeg",
+            "price": 79.9,
+            "rating": 5,
+            "rating_num": 2,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 27,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Желток яичный Grovo",
+            "desc": "Удобное яйцо 28 пастеризованных желтков...",
+            "img": "https://static08.perekrestok.ru/src/product.file/list/image/33/18/111833.jpeg",
+            "price": 119.9,
+            "rating": 5,
+            "rating_num": 4,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 28,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Волжское Утро",
+            "desc": "Отборные 10шт",
+            "img": "https://static03.perekrestok.ru/src/product.file/list/image/30/64/86430.jpeg",
+            "price": 79.9,
+            "rating": 5,
+            "rating_num": 27,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 29,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Волжанин Экояйцо С1 10шт",
+            "desc": "",
+            "img": "https://static01.perekrestok.ru/src/product.file/list/image/78/93/109378.jpeg",
+            "price": 74.9,
+            "rating": 5,
+            "rating_num": 8,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          },
+          {
+            "id": 30,
+            "product_type": {
+                "id": 3,
+                "name": "яйцо"
+            },
+            "name": "Яйца Окское С0 белые 10шт",
+            "desc": "",
+            "img": "https://static08.perekrestok.ru/src/product.file/list/image/81/49/44981.jpeg",
+            "price": 104.9,
+            "rating": 5,
+            "rating_num": 75,
+            "delivery": "завтра",
+            "fresh_days": "",
+            "discount": false
+          }
+    ]
+}

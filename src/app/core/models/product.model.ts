@@ -1,9 +1,9 @@
-import {ProductType} from "./product_type.model";
-import {ProductService} from "../services/product.service"
+import {ProductType} from "./product-type.model";
 
 export class Product {
   id: number;
   name: string;
+  desc: string;
   product_type: ProductType;
   img: string;
   price: number;
@@ -13,12 +13,5 @@ export class Product {
   fresh_days: string;
   discount: boolean;
   price_discount: number;
-  products = {};
-
-  constructor(private myService: ProductService) {}
-
-  ngOnInit() {
-    this.myService.getProducts()
-      .subscribe(res => this.products = res);
-  }
+  discount_num: number;
 }
