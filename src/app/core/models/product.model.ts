@@ -14,4 +14,6 @@ export class Product {
   discount: boolean;
   price_discount: number;
   discount_num: number;
+  brand: string;
+  country: string;
 }

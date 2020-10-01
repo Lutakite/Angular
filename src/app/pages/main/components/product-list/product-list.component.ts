@@ -12,6 +12,7 @@ import { ProductFilter } from 'src/app/core/models/product-filter.model';
 export class ProductListComponent implements OnInit{
   products: Product[]=[];
   filters: ProductFilter;
+  possibleFilters: ProductFilter;
 
   constructor (public productService: ProductService) {}
 
@@ -20,6 +21,12 @@ export class ProductListComponent implements OnInit{
     this.filters = new ProductFilter;
     this.filters.discount = false;
     this.filters.brand = [];
+    this.filters.country = [];
+    this.possibleFilters = new ProductFilter;
+    this.possibleFilters.brand = [];
+    this.productService.getBrands().subscribe(data => this.possibleFilters.brand=data);
+    this.possibleFilters.country = [];
+    this.productService.getCountries().subscribe(data => this.possibleFilters.country=data);
   }
 
   ngOnChanges(){
@@ -37,6 +44,16 @@ export class ProductListComponent implements OnInit{
     }
     else {
       this.filters.brand = this.filters.brand.filter(item => item!=brand);
+    }
+    this.productService.getFilteredProducts(this.filters).subscribe(data => this.products=data);
+  }
+
+  setFilterCountry(country){
+    if (this.filters.country.indexOf(country) == -1) {
+      this.filters.country.push(country) ;
+    }
+    else {
+      this.filters.country = this.filters.country.filter(item => item!=country);
     }
     this.productService.getFilteredProducts(this.filters).subscribe(data => this.products=data);
   }

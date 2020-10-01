@@ -42,7 +42,8 @@
             "discount": true,
             "price_discount": 59.9,
             "discount_num": 25,
-            "brand": "Parmalat"
+            "brand": "Parmalat",
+            "country": "Россия"
           },
           {
             "id": 2,
@@ -59,7 +60,8 @@
             "delivery": "завтра",
             "fresh_days": "",
             "discount": false,
-            "brand": "Valio"
+            "brand": "Valio",
+            "country": "Финляндия"
           },
           {
             "id": 3,
@@ -76,7 +78,8 @@
             "delivery": "завтра",
             "fresh_days": "7+",
             "discount": false,
-            "brand": "Домик в деревне"
+            "brand": "Домик в деревне",
+            "country": "Россия"
           },
           {
             "id": 4,
@@ -93,7 +96,8 @@
             "delivery": "завтра",
             "fresh_days": "6+",
             "discount": false,
-            "brand": "Простоквашино"
+            "brand": "Простоквашино",
+            "country": "Россия"
           },
           {
             "id": 5,
@@ -110,7 +114,8 @@
             "delivery": "завтра",
             "fresh_days": "",
             "discount": false,
-            "brand": "Простоквашино"
+            "brand": "Простоквашино",
+            "country": "Россия"
           },
           {
             "id": 6,
@@ -127,7 +132,8 @@
             "delivery": "завтра",
             "fresh_days": "",
             "discount": false,
-            "brand": "Сарафаново"
+            "brand": "Сарафаново",
+            "country": "Беларусь"
           },
           {
             "id": 7,
@@ -144,7 +150,8 @@
             "delivery": "завтра",
             "fresh_days": "3+",
             "discount": false,
-            "brand": "Угрече Поле"
+            "brand": "Угрече Поле",
+            "country": "Россия"
           },
           {
             "id": 8,
@@ -161,7 +168,8 @@
             "delivery": "завтра",
             "fresh_days": "9+",
             "discount": false,
-            "brand": "ЭкоНива"
+            "brand": "ЭкоНива",
+            "country": "Россия"
           },
           {
             "id": 9,
@@ -178,7 +186,8 @@
             "delivery": "завтра",
             "fresh_days": "7+",
             "discount": false,
-            "brand": "Молочная культура"
+            "brand": "Молочная культура",
+            "country": "Россия"
           },
           {
             "id": 10,
@@ -197,7 +206,8 @@
             "discount": true,
             "price_discount": 89.9,
             "discount_num": 24,
-            "brand": "Простоквашино"
+            "brand": "Простоквашино",
+            "country": "Россия"
           },
           {
             "id": 11,
