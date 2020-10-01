@@ -37,12 +37,21 @@ export class ProductService {
     );
   }
 
+  getTags()  : Observable<string[]> {
+    return this.http.get('../../assets/data/product-types.json').pipe(
+      map(data => {
+        let tags = data["products"].filter(x => x.tags).map(x => x.tags);
+        tags = Array.from(new Set(tags.flat()));
+        return tags;})
+    );
+  }
+
   getFilteredProducts(productFilter)  : Observable<Product[]> {
     console.log(productFilter);
     return this.http.get('../../assets/data/product-types.json').pipe(
       map(data => {
         let productList = data["products"];
-        return productList.filter(product => (!productFilter.discount || !!product.discount)).filter(product => (!productFilter.brand || productFilter.brand.length===0 || productFilter.brand.indexOf(product.brand)!=-1)).filter(product => (!productFilter.country || productFilter.country.length===0 || productFilter.country.indexOf(product.country)!=-1));
+        return productList.filter(product => (!productFilter.discount || !!product.discount)).filter(product => (!productFilter.brand || productFilter.brand.length===0 || productFilter.brand.indexOf(product.brand)!=-1)).filter(product => (!productFilter.country || productFilter.country.length===0 || productFilter.country.indexOf(product.country)!=-1)).filter(product => (!productFilter.tags || productFilter.tags.length===0 || [...new Set(product.tags)].filter(item => productFilter.tags.includes(item)).length===productFilter.tags.length ));
       })
     );
   }

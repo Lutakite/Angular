@@ -22,11 +22,14 @@ export class ProductListComponent implements OnInit{
     this.filters.discount = false;
     this.filters.brand = [];
     this.filters.country = [];
+    this.filters.tags = [];
     this.possibleFilters = new ProductFilter;
     this.possibleFilters.brand = [];
     this.productService.getBrands().subscribe(data => this.possibleFilters.brand=data);
     this.possibleFilters.country = [];
     this.productService.getCountries().subscribe(data => this.possibleFilters.country=data);
+    this.possibleFilters.tags = [];
+    this.productService.getTags().subscribe(data => this.possibleFilters.tags=data);
   }
 
   ngOnChanges(){
@@ -54,6 +57,16 @@ export class ProductListComponent implements OnInit{
     }
     else {
       this.filters.country = this.filters.country.filter(item => item!=country);
+    }
+    this.productService.getFilteredProducts(this.filters).subscribe(data => this.products=data);
+  }
+
+  setFilterTag(tag){
+    if (this.filters.tags.indexOf(tag) == -1) {
+      this.filters.tags.push(tag) ;
+    }
+    else {
+      this.filters.tags = this.filters.tags.filter(item => item!=tag);
     }
     this.productService.getFilteredProducts(this.filters).subscribe(data => this.products=data);
   }

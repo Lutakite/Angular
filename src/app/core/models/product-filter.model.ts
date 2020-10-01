@@ -5,4 +5,5 @@ export class ProductFilter {
   discount: boolean;
   brand: string[];
   country: string[];
+  tags: string[];
 }

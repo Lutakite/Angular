@@ -31,94 +31,102 @@
     </div>
   </div>
 
-
-  <div class="items">
-    <div *ngFor='let product of products'>
-
-      <div class="item">
-        <div *ngIf="product.fresh_days" class="fresh">
-          <div>
-            <img src='/assets/img/fresh.PNG' alt="" class="fresh_list"/>
-            <span class="fresh_num">{{product.fresh_days}}</span>
-          </div>
-          <div class="fresh_days">ДНЕЙ</div>
-        </div>
-
-        <div class="img"><img src={{product.img}} alt={{product.name}} class="prod_img"></div>
-
-        <div class="rating_like">
-          <div class="rating">
-            <div [ngSwitch]="product.rating">
-              <div *ngSwitchCase="'1'">
-                  <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
-              </div>
-              <div *ngSwitchCase="'2'">
-                  <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
-              </div>
-              <div *ngSwitchCase="'3'">
-                  <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
-              </div>
-              <div *ngSwitchCase="'4'">
-                  <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
-              </div>
-              <div *ngSwitchDefault>
-                  <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-                  <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
-              </div>
-            </div>
-            <div class="rating_num">{{product.rating_num}}</div>
-          </div>
-          <div><img src="/assets/img/heart_red.svg" alt="" class="heart"/></div>
-        </div>
-
-        
-        <div class="name">{{product.name}}<br>{{product.desc}}</div>
-
-        
-        <div *ngIf="product.discount">
-          <div class="price_and_discount">
-            <div class="price_old">
-              {{product.price.toString().split('.')[0]}}<span class="penny_old">,{{product.price.toString().split('.')[1]}} </span><span class="ruble_old">&#8381;</span>
-            </div>
-            <div class="discount">-{{product.discount_num}}%</div>
-          </div>
-          <div class="price price_discount">
-            {{product.price_discount.toString().split('.')[0]}}<span class="penny">,{{product.price_discount.toString().split('.')[1]}} </span><span class="ruble">&#8381;/</span><span class="copy">шт</span>
-          </div>
-        </div>
-        
-        <div *ngIf="!product.discount">
-          <div class="price discount_empty">
-            {{product.price.toString().split('.')[0]}}<span class="penny">,{{product.price.toString().split('.')[1]}} </span><span class="ruble">&#8381;/</span><span class="copy">шт</span>
-          </div>
-        </div>
-
-        
-        <button class="buy_btn"><div>Купить</div><div><img src="/assets/img/cart.png" alt="" class="cart"/></div></button>
-
-        <div class="delivery">Доставка {{product.delivery}}</div>
+  <div class="items_block">
+    <div class="tags_block">
+      <div *ngFor='let tag of possibleFilters.tags' class="tag">
+        <input type="checkbox" (click)="setFilterTag(tag)" class="tag_checkbox" id="{{tag}}"/><label class="tag_label" for="{{tag}}">{{tag}}</label>
       </div>
+    </div>
+
+    <div class="items">
+
+      <div *ngFor='let product of products'>
+
+        <div class="item">
+          <div *ngIf="product.fresh_days" class="fresh">
+            <div>
+              <img src='/assets/img/fresh.PNG' alt="" class="fresh_list"/>
+              <span class="fresh_num">{{product.fresh_days}}</span>
+            </div>
+            <div class="fresh_days">ДНЕЙ</div>
+          </div>
+
+          <div class="img"><img src={{product.img}} alt={{product.name}} class="prod_img"></div>
+
+          <div class="rating_like">
+            <div class="rating">
+              <div [ngSwitch]="product.rating">
+                <div *ngSwitchCase="'1'">
+                    <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
+                </div>
+                <div *ngSwitchCase="'2'">
+                    <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
+                </div>
+                <div *ngSwitchCase="'3'">
+                    <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/> 
+                </div>
+                <div *ngSwitchCase="'4'">
+                    <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star star_empty"/>
+                </div>
+                <div *ngSwitchDefault>
+                    <img src='/assets/img/star_full_grey.png' alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                    <img src="/assets/img/star_full_grey.png" alt="" class="star"/>
+                </div>
+              </div>
+              <div class="rating_num">{{product.rating_num}}</div>
+            </div>
+            <div><img src="/assets/img/heart_red.svg" alt="" class="heart"/></div>
+          </div>
+
+          
+          <div class="name">{{product.name}}<br>{{product.desc}}</div>
+
+          
+          <div *ngIf="product.discount">
+            <div class="price_and_discount">
+              <div class="price_old">
+                {{product.price.toString().split('.')[0]}}<span class="penny_old">,{{product.price.toString().split('.')[1]}} </span><span class="ruble_old">&#8381;</span>
+              </div>
+              <div class="discount">-{{product.discount_num}}%</div>
+            </div>
+            <div class="price price_discount">
+              {{product.price_discount.toString().split('.')[0]}}<span class="penny">,{{product.price_discount.toString().split('.')[1]}} </span><span class="ruble">&#8381;/</span><span class="copy">шт</span>
+            </div>
+          </div>
+          
+          <div *ngIf="!product.discount">
+            <div class="price discount_empty">
+              {{product.price.toString().split('.')[0]}}<span class="penny">,{{product.price.toString().split('.')[1]}} </span><span class="ruble">&#8381;/</span><span class="copy">шт</span>
+            </div>
+          </div>
+
+          
+          <button class="buy_btn"><div>Купить</div><div><img src="/assets/img/cart.png" alt="" class="cart"/></div></button>
+
+          <div class="delivery">Доставка {{product.delivery}}</div>
+        </div>
 
 
+      </div>
     </div>
   </div>
 </div>

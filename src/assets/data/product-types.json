@@ -4,26 +4,7 @@
             "id": 0,
             "name": "Молоко, сыр, яйца"
         }
-    ],
-    "categories": [
-        {
-            "id": 1,
-            "name": "молоко"
-        },
-        {
-            "id": 2,
-            "name": "сыр"
-        },
-        {
-            "id": 3,
-            "name": "яйца"
-        }
-    ],
-    "filters" : [
-        {
-            
-        }
-    ],
+      ],
     "products": [
         {
             "id": 1,
@@ -43,7 +24,8 @@
             "price_discount": 59.9,
             "discount_num": 25,
             "brand": "Parmalat",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Parmalat"]
           },
           {
             "id": 2,
@@ -61,7 +43,8 @@
             "fresh_days": "",
             "discount": false,
             "brand": "Valio",
-            "country": "Финляндия"
+            "country": "Финляндия",
+            "tags": ["Без лактозы", "Мало жира"]
           },
           {
             "id": 3,
@@ -79,7 +62,8 @@
             "fresh_days": "7+",
             "discount": false,
             "brand": "Домик в деревне",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Домик в деревне"]
           },
           {
             "id": 4,
@@ -97,7 +81,8 @@
             "fresh_days": "6+",
             "discount": false,
             "brand": "Простоквашино",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Простоквашино"]
           },
           {
             "id": 5,
@@ -115,7 +100,8 @@
             "fresh_days": "",
             "discount": false,
             "brand": "Простоквашино",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Простоквашино"]
           },
           {
             "id": 6,
@@ -133,7 +119,8 @@
             "fresh_days": "",
             "discount": false,
             "brand": "Сарафаново",
-            "country": "Беларусь"
+            "country": "Беларусь",
+            "tags": ["Фермерские"]
           },
           {
             "id": 7,
@@ -151,7 +138,8 @@
             "fresh_days": "3+",
             "discount": false,
             "brand": "Угрече Поле",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Фермерские"]
           },
           {
             "id": 8,
@@ -169,7 +157,8 @@
             "fresh_days": "9+",
             "discount": false,
             "brand": "ЭкоНива",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Фермерские"]
           },
           {
             "id": 9,
@@ -187,7 +176,8 @@
             "fresh_days": "7+",
             "discount": false,
             "brand": "Молочная культура",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Фермерские"]
           },
           {
             "id": 10,
@@ -207,7 +197,8 @@
             "price_discount": 89.9,
             "discount_num": 24,
             "brand": "Простоквашино",
-            "country": "Россия"
+            "country": "Россия",
+            "tags": ["Простоквашино"]
           },
           {
             "id": 11,
