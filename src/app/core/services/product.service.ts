@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/product.model';
-import { ProductFilter } from '../models/product-filter.model';
+import { MainCategory } from '../models/main-category.model';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
@@ -15,6 +15,13 @@ export class ProductService {
       map(data => {
         let productList = data["products"];
         return productList;})
+    );
+  }
+
+  getMainCategory()  : Observable<MainCategory> {
+    return this.http.get('../../assets/data/product-types.json').pipe(
+      map(data => {
+        return data["main_category"];})
     );
   }
 
@@ -47,7 +54,6 @@ export class ProductService {
   }
 
   getFilteredProducts(productFilter)  : Observable<Product[]> {
-    console.log(productFilter);
     return this.http.get('../../assets/data/product-types.json').pipe(
       map(data => {
         let productList = data["products"];

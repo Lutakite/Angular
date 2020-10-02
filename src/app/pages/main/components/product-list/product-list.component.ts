@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../../../../app/core/services/product.service'
 import { Product } from '../../../../../app/core/models/product.model'
 import { ProductFilter } from 'src/app/core/models/product-filter.model';
+import { MainCategory } from 'src/app/core/models/main-category.model';
 @Component({
   selector: 'app-product-list',
   templateUrl: './product-list.component.html',
@@ -13,11 +14,13 @@ export class ProductListComponent implements OnInit{
   products: Product[]=[];
   filters: ProductFilter;
   possibleFilters: ProductFilter;
+  mainCategory: MainCategory;
 
   constructor (public productService: ProductService) {}
 
   ngOnInit(){
     this.productService.getProducts().subscribe(data => this.products=data);
+    this.productService.getMainCategory().subscribe(data => this.mainCategory=data);
     this.filters = new ProductFilter;
     this.filters.discount = false;
     this.filters.brand = [];

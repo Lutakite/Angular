@@ -1,10 +1,9 @@
 {
-    "main_category": [
+    "main_category": 
         {
             "id": 0,
             "name": "Молоко, сыр, яйца"
-        }
-      ],
+        },
     "products": [
         {
             "id": 1,
@@ -216,7 +215,8 @@
             "fresh_days": "",
             "discount": true,
             "price_discount": 36.9,
-            "discount_num": 20
+            "discount_num": 20,
+            "country": "Россия"
           },
           {
             "id": 12,
@@ -232,7 +232,8 @@
             "rating_num": 45,
             "delivery": "завтра",
             "fresh_days": "",
-            "discount": false
+            "discount": false,
+            "country": "Беларусь"
           },
           {
             "id": 13,
@@ -396,7 +397,8 @@
             "rating_num": 67,
             "delivery": "завтра",
             "fresh_days": "",
-            "discount": false
+            "discount": false,
+            "tags": ["Фермерские"]
           },
           {
             "id": 22,
@@ -430,7 +432,8 @@
             "fresh_days": "",
             "discount": true,
             "price_discount": 69.9,
-            "discount_num": 22
+            "discount_num": 22,
+            "tags": ["Фермерские"]
           },
           {
             "id": 24,
@@ -446,7 +449,8 @@
             "rating_num": 43,
             "delivery": "завтра",
             "fresh_days": "17+",
-            "discount": false
+            "discount": false,
+            "tags": ["Фермерские"]
           },
           {
             "id": 25,
@@ -510,7 +514,8 @@
             "rating_num": 27,
             "delivery": "завтра",
             "fresh_days": "",
-            "discount": false
+            "discount": false,
+            "tags": ["Фермерские"]
           },
           {
             "id": 29,

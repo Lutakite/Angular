@@ -32,6 +32,15 @@
   </div>
 
   <div class="items_block">
+
+    <div class="items_header">
+      <div class="category_name">{{mainCategory.name}}</div>
+      <div class="sort_btn">
+        <div class="sort_name"><img src='/assets/img/str.PNG' alt="" class="sort_direction sort_img"/><div>По популярности</div></div>
+        <div><img src='/assets/img/str2.PNG' alt="" class="sort_img"/></div>
+      </div>
+    </div>
+
     <div class="tags_block">
       <div *ngFor='let tag of possibleFilters.tags' class="tag">
         <input type="checkbox" (click)="setFilterTag(tag)" class="tag_checkbox" id="{{tag}}"/><label class="tag_label" for="{{tag}}">{{tag}}</label>
