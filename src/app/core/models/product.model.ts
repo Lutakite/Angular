@@ -1,19 +1,20 @@
-import {ProductType} from "./product-type.model";
+import {ProductType} from './product-type.model';
 
 export class Product {
   id: number;
   name: string;
   desc: string;
-  product_type: ProductType;
+  productType: ProductType;
   img: string;
   price: number;
   rating: number;
-  rating_num: number;
+  ratingNum: number;
   delivery: string;
-  fresh_days: string;
+  freshDays: string;
   discount: boolean;
-  price_discount: number;
-  discount_num: number;
+  priceDiscount: number;
+  discountNum: number;
   brand: string;
   country: string;
+  tags: string[];
 }

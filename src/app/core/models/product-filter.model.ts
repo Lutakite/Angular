@@ -1,9 +1,10 @@
 export class ProductFilter {
-  product_type: number;
+  productType: number;
   price: number;
   rating: number;
   discount: boolean;
   brand: string[];
   country: string[];
   tags: string[];
+  sort: string;
 }

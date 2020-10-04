@@ -3,7 +3,7 @@
     src: url("/assets/fonts/rotonda.ttf") format("truetype");
 }
 
-.prod_list_page{
+.prod-list-page{
     display: flex;
     font-family: Rotonda;
 }
@@ -14,34 +14,34 @@
     color: #043e44;
 }
 
-.filters_name{
+.filters-name{
     font-weight: 700;
     font-size: 20px;
 }
 
-.filters_name_img{
+.filters-name-img{
     display: flex;
     margin-bottom: 20px;
 }
 
-.filter_img{
+.filter-img{
     height: 20px;
     width: 20px;
     margin-right: 5px;
 }
 
-.filter_name{
+.filter-name{
     font-size: 16px;
     font-weight: 700;
     border-bottom: 1px solid rgb(216, 216, 216);
     padding: 10px 0;
 }
 
-.filter_block{
+.filter-block{
     margin-bottom: 10px;
 }
 
-.filter_detail{
+.filter-detail{
     font-size: 14px;
     padding: 8px 15px 8px 12px;
 }
@@ -53,46 +53,69 @@
     max-width: 980px;
 }
 
-.items_header{
+.items-header{
     display: flex;
     justify-content: space-between;
 }
 
-.category_name{
+.category-name{
     color: #043e44;
     font-weight: bold;
     font-size: 22px;
     margin-bottom: 20px;
+    position: relative;
 }
 
-.sort_btn{
+.sort-btn{
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 10px;
     width: 225px;
     border-radius: 5px;
-    padding: 7px;
+    padding: 7px 7px 0 7px;
     border: 1px solid rgb(216, 216, 216);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sort-option{
+    padding: 7px 0;
+    border-top: 1px solid rgb(216, 216, 216);
+}
+
+.cur-sort{
     display: flex;
     align-items: center;
     justify-content: space-between;
+    margin-bottom: 7px;
 }
 
-.sort_direction{
+.sort-direction{
     margin-right: 5px;
 }
 
-.sort_img{
+.sort-img{
     height: 16px;
 }
 
-.sort_name{
+.sort-img-upsidedown{
+    transform: rotate(180deg);
+}
+
+
+.sort-name{
     display: flex;
 }
 
-.tags_block{
+.tags-block{
     display: flex;
     flex-wrap: wrap;
 }
 
-.tag_checkbox {
+.tag-checkbox {
     display: none;
 }
 
@@ -100,14 +123,14 @@
     margin: 15px 10px 20px 0px;
 }
 
-.tag_label{
+.tag-label{
     color: #043e44;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid rgb(216, 216, 216);
 }
 
-.tag_checkbox:checked + label {
+.tag-checkbox:checked + label {
     color: #fff;
     background: #919fa7;
 }
@@ -141,16 +164,16 @@
     align-items: center;
 }
 
-.fresh_num{
+.fresh-num{
     font-size: 26px;
     color: #77bd43;
 }
 
-.fresh_days{
+.fresh-days{
     font-size: 14px;
 }
 
-.fresh_list{
+.fresh-list{
     height: 20px;
 }
 
@@ -162,7 +185,7 @@
     height: 155px;
 }
 
-.prod_img{
+.prod-img{
     object-fit: contain;
 }
 
@@ -183,7 +206,7 @@
     margin-bottom: 15px;
 }
 
-.discount_empty{
+.discount-empty{
     margin-top: 23px;
 }
 
@@ -197,22 +220,22 @@
     padding: 5px;
 }
 
-.price_and_discount{
+.price-and-discount{
     display: flex;
 }
 
-.price_discount{
+.price-discount{
     color: red;
 }
 
-.price_old{ 
+.price-old{ 
     position: relative;
     color: #919FA7;
     font-size: 18px;
     margin-right: 15px;
 }
 
-.price_old::before{
+.price-old::before{
     content: "";
 	border-bottom: 2px solid #919FA7;
 	position: absolute;
@@ -226,11 +249,11 @@
     height: 15px;
 }
 
-.star_empty{
+.star-empty{
     opacity: 0.3;
 }
 
-.rating_like{
+.rating-like{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -248,7 +271,7 @@
     filter: none;
 }
 
-.rating_num{
+.rating-num{
     margin-left: 3px;
     font-size: 10px;
     line-height: 15px;
@@ -263,7 +286,7 @@
     filter: opacity(0.5);
 }
 
-.buy_btn{
+.buy-btn{
     background-color: #7ac143;
     padding: 7px;
     border: none;
@@ -279,7 +302,7 @@
     justify-content: center;
 }
 
-.buy_btn:hover{
+.buy-btn:hover{
     background-color: #008b44;
 }
 
@@ -298,10 +321,10 @@
     font-size: 20px;
 }
 
-.ruble, .penny_old{
+.ruble, .penny-old{
     font-size: 16px;
 }
 
-.copy, .ruble_old{
+.copy, .ruble-old{
     font-size: 15px;
 }

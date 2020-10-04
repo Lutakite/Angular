@@ -7,7 +7,7 @@
     "products": [
         {
             "id": 1,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -16,19 +16,19 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/94/26/22694.jpeg",
             "price": 79.9,
             "rating": 5,
-            "rating_num": 151,
+            "ratingNum": 151,
             "delivery": "завтра",
-            "fresh_days": "189+",
+            "freshDays": "189+",
             "discount": true,
-            "price_discount": 59.9,
-            "discount_num": 25,
+            "priceDiscount": 59.9,
+            "discountNum": 25,
             "brand": "Parmalat",
             "country": "Россия",
             "tags": ["Parmalat"]
           },
           {
             "id": 2,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -37,9 +37,9 @@
             "img": "https://static07.perekrestok.ru/src/product.file/list/image/33/56/175633.jpeg",
             "price": 209.9,
             "rating": 5,
-            "rating_num": 21,
+            "ratingNum": 21,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "brand": "Valio",
             "country": "Финляндия",
@@ -47,7 +47,7 @@
           },
           {
             "id": 3,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -56,9 +56,9 @@
             "img": "https://static06.perekrestok.ru/src/product.file/list/image/86/61/216186.jpeg",
             "price": 74.9,
             "rating": 4,
-            "rating_num": 189,
+            "ratingNum": 189,
             "delivery": "завтра",
-            "fresh_days": "7+",
+            "freshDays": "7+",
             "discount": false,
             "brand": "Домик в деревне",
             "country": "Россия",
@@ -66,7 +66,7 @@
           },
           {
             "id": 4,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -75,9 +75,9 @@
             "img": "https://static01.perekrestok.ru/src/product.file/list/image/41/92/129241.jpeg",
             "price": 69.9,
             "rating": 4,
-            "rating_num": 522,
+            "ratingNum": 522,
             "delivery": "завтра",
-            "fresh_days": "6+",
+            "freshDays": "6+",
             "discount": false,
             "brand": "Простоквашино",
             "country": "Россия",
@@ -85,7 +85,7 @@
           },
           {
             "id": 5,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -94,9 +94,9 @@
             "img": "https://static03.perekrestok.ru/src/product.file/list/image/80/83/118380.jpeg",
             "price": 94.9,
             "rating": 4,
-            "rating_num": 147,
+            "ratingNum": 147,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "brand": "Простоквашино",
             "country": "Россия",
@@ -104,7 +104,7 @@
           },
           {
             "id": 6,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -113,9 +113,9 @@
             "img": "https://static00.perekrestok.ru/src/product.file/list/image/52/57/175752.jpeg",
             "price": 69.9,
             "rating": 5,
-            "rating_num": 1,
+            "ratingNum": 1,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "brand": "Сарафаново",
             "country": "Беларусь",
@@ -123,7 +123,7 @@
           },
           {
             "id": 7,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -132,9 +132,9 @@
             "img": "https://static06.perekrestok.ru/src/product.file/list/image/73/66/116673.jpeg",
             "price": 79.9,
             "rating": 5,
-            "rating_num": 1,
+            "ratingNum": 1,
             "delivery": "завтра",
-            "fresh_days": "3+",
+            "freshDays": "3+",
             "discount": false,
             "brand": "Угрече Поле",
             "country": "Россия",
@@ -142,7 +142,7 @@
           },
           {
             "id": 8,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -151,9 +151,9 @@
             "img": "https://static07.perekrestok.ru/src/product.file/list/image/77/20/182077.jpeg",
             "price": 79.9,
             "rating": 5,
-            "rating_num": 2,
+            "ratingNum": 2,
             "delivery": "завтра",
-            "fresh_days": "9+",
+            "freshDays": "9+",
             "discount": false,
             "brand": "ЭкоНива",
             "country": "Россия",
@@ -161,7 +161,7 @@
           },
           {
             "id": 9,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -170,9 +170,9 @@
             "img": "https://static03.perekrestok.ru/src/product.file/list/image/40/84/238440.jpeg",
             "price": 174.9,
             "rating": 5,
-            "rating_num": 3,
+            "ratingNum": 3,
             "delivery": "завтра",
-            "fresh_days": "7+",
+            "freshDays": "7+",
             "discount": false,
             "brand": "Молочная культура",
             "country": "Россия",
@@ -180,7 +180,7 @@
           },
           {
             "id": 10,
-            "product_type": {
+            "productType": {
                 "id": 1,
                 "name": "молоко"
             },
@@ -189,19 +189,19 @@
             "img": "https://static00.perekrestok.ru/src/product.file/list/image/77/57/195777.jpeg",
             "price": 119,
             "rating": 5,
-            "rating_num": 1,
+            "ratingNum": 1,
             "delivery": "завтра",
-            "fresh_days": "6+",
+            "freshDays": "6+",
             "discount": true,
-            "price_discount": 89.9,
-            "discount_num": 24,
+            "priceDiscount": 89.9,
+            "discountNum": 24,
             "brand": "Простоквашино",
             "country": "Россия",
             "tags": ["Простоквашино"]
           },
           {
             "id": 11,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -210,17 +210,17 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/77/69/36977.jpeg",
             "price": 45.9,
             "rating": 3,
-            "rating_num": 43,
+            "ratingNum": 43,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": true,
-            "price_discount": 36.9,
-            "discount_num": 20,
+            "priceDiscount": 36.9,
+            "discountNum": 20,
             "country": "Россия"
           },
           {
             "id": 12,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -229,15 +229,15 @@
             "img": "https://static08.perekrestok.ru/src/product.file/list/image/77/35/223577.jpeg",
             "price": 144.9,
             "rating": 5,
-            "rating_num": 45,
+            "ratingNum": 45,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "country": "Беларусь"
           },
           {
             "id": 13,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -246,14 +246,14 @@
             "img": "https://static06.perekrestok.ru/src/product.file/list/image/95/61/216195.jpeg",
             "price": 279.9,
             "rating": 5,
-            "rating_num": 48,
+            "ratingNum": 48,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 14,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -262,14 +262,14 @@
             "img": "https://static02.perekrestok.ru/src/product.file/list/image/42/52/165242.jpeg",
             "price": 239.9,
             "rating": 5,
-            "rating_num": 93,
+            "ratingNum": 93,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 15,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -278,14 +278,14 @@
             "img": "https://static04.perekrestok.ru/src/product.file/list/image/90/73/37390.jpeg",
             "price": 259.9,
             "rating": 4,
-            "rating_num": 12,
+            "ratingNum": 12,
             "delivery": "завтра",
-            "fresh_days": "22+",
+            "freshDays": "22+",
             "discount": false
           },
           {
             "id": 16,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -294,16 +294,16 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/34/42/104234.jpeg",
             "price": 269.9,
             "rating": 4,
-            "rating_num": 26,
+            "ratingNum": 26,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": true,
-            "price_discount": 199.9,
-            "discount_num": 26
+            "priceDiscount": 199.9,
+            "discountNum": 26
           },
           {
             "id": 17,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -312,14 +312,14 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/60/67/46760.jpeg",
             "price": 219.9,
             "rating": 5,
-            "rating_num": 27,
+            "ratingNum": 27,
             "delivery": "завтра",
-            "fresh_days": "30+",
+            "freshDays": "30+",
             "discount": false
           },
           {
             "id": 18,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -328,14 +328,14 @@
             "img": "https://static02.perekrestok.ru/src/product.file/list/image/62/38/103862.jpeg",
             "price": 319.9,
             "rating": 5,
-            "rating_num": 125,
+            "ratingNum": 125,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 19,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -344,14 +344,14 @@
             "img": "https://static04.perekrestok.ru/src/product.file/list/image/55/98/139855.jpeg",
             "price": 124.9,
             "rating": 5,
-            "rating_num": 10,
+            "ratingNum": 10,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 19,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -360,16 +360,16 @@
             "img": "https://static07.perekrestok.ru/src/product.file/list/image/09/36/73609.jpeg",
             "price": 259.9,
             "rating": 5,
-            "rating_num": 7,
+            "ratingNum": 7,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": true,
-            "price_discount": 199.9,
-            "discount_num": 23
+            "priceDiscount": 199.9,
+            "discountNum": 23
           },
           {
             "id": 20,
-            "product_type": {
+            "productType": {
                 "id": 2,
                 "name": "сыр"
             },
@@ -378,14 +378,14 @@
             "img": "https://static01.perekrestok.ru/src/product.file/list/image/20/08/180820.jpeg",
             "price": 159.9,
             "rating": 4,
-            "rating_num": 37,
+            "ratingNum": 37,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 21,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -394,15 +394,15 @@
             "img": "https://static00.perekrestok.ru/src/product.file/list/image/25/75/177525.jpeg",
             "price": 159.9,
             "rating": 5,
-            "rating_num": 67,
+            "ratingNum": 67,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "tags": ["Фермерские"]
           },
           {
             "id": 22,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -411,14 +411,14 @@
             "img": "https://static01.perekrestok.ru/src/product.file/list/image/65/30/53065.jpeg",
             "price": 59.9,
             "rating": 5,
-            "rating_num": 42,
+            "ratingNum": 42,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 23,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -427,17 +427,17 @@
             "img": "https://static06.perekrestok.ru/src/product.file/list/image/97/49/44997.jpeg",
             "price": 89.9,
             "rating": 4,
-            "rating_num": 44,
+            "ratingNum": 44,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": true,
-            "price_discount": 69.9,
-            "discount_num": 22,
+            "priceDiscount": 69.9,
+            "discountNum": 22,
             "tags": ["Фермерские"]
           },
           {
             "id": 24,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -446,15 +446,15 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/46/35/53546.jpeg",
             "price": 149.9,
             "rating": 4,
-            "rating_num": 43,
+            "ratingNum": 43,
             "delivery": "завтра",
-            "fresh_days": "17+",
+            "freshDays": "17+",
             "discount": false,
             "tags": ["Фермерские"]
           },
           {
             "id": 25,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -463,14 +463,14 @@
             "img": "https://static05.perekrestok.ru/src/product.file/list/image/45/22/102245.jpeg",
             "price": 359.9,
             "rating": 3,
-            "rating_num": 4,
+            "ratingNum": 4,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 26,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -479,14 +479,14 @@
             "img": "https://static00.perekrestok.ru/src/product.file/list/image/66/68/106866.jpeg",
             "price": 79.9,
             "rating": 5,
-            "rating_num": 2,
+            "ratingNum": 2,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 27,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -495,14 +495,14 @@
             "img": "https://static08.perekrestok.ru/src/product.file/list/image/33/18/111833.jpeg",
             "price": 119.9,
             "rating": 5,
-            "rating_num": 4,
+            "ratingNum": 4,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 28,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -511,15 +511,15 @@
             "img": "https://static03.perekrestok.ru/src/product.file/list/image/30/64/86430.jpeg",
             "price": 79.9,
             "rating": 5,
-            "rating_num": 27,
+            "ratingNum": 27,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false,
             "tags": ["Фермерские"]
           },
           {
             "id": 29,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -528,14 +528,14 @@
             "img": "https://static01.perekrestok.ru/src/product.file/list/image/78/93/109378.jpeg",
             "price": 74.9,
             "rating": 5,
-            "rating_num": 8,
+            "ratingNum": 8,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           },
           {
             "id": 30,
-            "product_type": {
+            "productType": {
                 "id": 3,
                 "name": "яйцо"
             },
@@ -544,9 +544,9 @@
             "img": "https://static08.perekrestok.ru/src/product.file/list/image/81/49/44981.jpeg",
             "price": 104.9,
             "rating": 5,
-            "rating_num": 75,
+            "ratingNum": 75,
             "delivery": "завтра",
-            "fresh_days": "",
+            "freshDays": "",
             "discount": false
           }
     ]
