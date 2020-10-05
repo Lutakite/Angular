@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { ProductListComponent} from './pages/main/components/product-list/product-list.component';
 import { ProductService } from './core/services/product.service';
 import { HttpClientModule } from '@angular/common/http';
+import { RublePipe } from './core/pipes/RublePipe.pipe';
+import { PennyPipe } from './core/pipes/PennyPipe.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductListComponent
+    ProductListComponent,
+    RublePipe,
+    PennyPipe
   ],
   imports: [
     BrowserModule,
