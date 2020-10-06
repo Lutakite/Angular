@@ -1,0 +1,47 @@
+<div class="filters">
+    <div class="filters-name-img">
+      <div><img src='/assets/img/filter.PNG' alt="" class="filter-img"/></div>
+      <div class="filters-name">Фильтры</div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-name">Акции и товары со скидкой</div>
+      <div class="filter-detail">
+        <label><input type="checkbox" (click)="setFilterDiscount()">Скидки</label>
+      </div>
+    </div>
+    
+    <div class="filter-block">
+        <div class="filter-name">Бренд</div>
+        <div *ngFor='let brand of brands$ | async'>
+        
+          <div *ngIf="(filteredBrands$ | async).indexOf(brand)===-1">
+            <div class="filter-detail filter-detail-no-products">
+                <label><input type="checkbox" (click)="setFilterBrand(brand)" class="filter-checkbox">{{brand}}</label>
+            </div>
+          </div>
+          <div *ngIf="(filteredBrands$ | async).indexOf(brand)!==-1">
+            <div class="filter-detail">
+                <label><input type="checkbox" (click)="setFilterBrand(brand)" class="filter-checkbox">{{brand}}</label>
+            </div>
+          </div> 
+
+        </div>
+    </div>
+
+    <div class="filter-block">
+      <div class="filter-name">Страна</div>
+      <div *ngFor='let country of countries$ | async'>
+        <div *ngIf="(filteredCountries$ | async).indexOf(country)===-1">
+          <div class="filter-detail filter-detail-no-products">
+            <label><input type="checkbox" (click)="setFilterCountry(country)" class="filter-checkbox">{{country}}</label>
+          </div>
+        </div>
+        <div *ngIf="(filteredCountries$ | async).indexOf(country)!==-1">
+          <div class="filter-detail">
+            <label><input type="checkbox" (click)="setFilterCountry(country)" class="filter-checkbox">{{country}}</label>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

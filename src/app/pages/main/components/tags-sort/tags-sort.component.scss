@@ -1,0 +1,88 @@
+@font-face {
+    font-family:"Rotonda";
+    src: url("/assets/fonts/rotonda.ttf") format("truetype");
+}
+
+.category-name{
+    color: #043e44;
+    font-weight: bold;
+    font-size: 22px;
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.sort-btn{
+    background-color: white;
+    position: absolute;
+    z-index: 1;
+    right: 100px;
+    top: 10px;
+    width: 225px;
+    border-radius: 5px;
+    padding: 7px 7px 0 7px;
+    border: 1px solid rgb(216, 216, 216);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sort-option{
+    padding: 7px 0;
+    border-top: 1px solid rgb(216, 216, 216);
+}
+
+.cur-sort{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.sort-direction{
+    margin-right: 5px;
+}
+
+.sort-img{
+    height: 16px;
+}
+
+.sort-img-upsidedown{
+    transform: rotate(180deg);
+}
+
+
+.sort-name{
+    display: flex;
+}
+
+.tags-block{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tag-checkbox {
+    display: none;
+}
+
+.tag{ 
+    margin: 15px 10px 20px 0px;
+}
+
+.tag-label{
+    color: #043e44;
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+.tag-label-no-products{
+    color: rgb(233, 233, 233);
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid rgb(233, 233, 233);
+}
+
+.tag-checkbox:checked + label {
+    color: #fff;
+    background: #919fa7;
+}

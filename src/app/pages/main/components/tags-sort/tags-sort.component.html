@@ -1,0 +1,46 @@
+<div class="items-header">
+    <div class="category-name">{{mainCategory.name}}</div>
+    <div class="sort-btn" (click)="setShowSortOptions()">
+        <div class="cur-sort">
+            <div class="sort-name">
+            <div *ngIf="!currentSortOption.type">
+                <img src='/assets/img/str.PNG' alt="" class="sort-direction sort-img"/>
+            </div>
+            <div *ngIf="currentSortOption.type">
+                <img src='/assets/img/str.PNG' alt="" class="sort-direction sort-img sort-img-upsidedown"/>
+            </div>
+            <div>{{currentSortOption.name}}</div>
+            </div>
+            <div *ngIf="!showSortOptions"><img src='/assets/img/str2.PNG' alt="" class="sort-img"/></div>
+            <div *ngIf="showSortOptions"><img src='/assets/img/str2.PNG' alt="" class="sort-img sort-img-upsidedown"/></div>
+        </div>
+
+        <div *ngIf="showSortOptions" class="sort-options">
+            <div *ngFor='let sortOption of sortOptions' (click)="setSortOption(sortOption)">
+            <div *ngIf="sortOption.name !== currentSortOption.name" class="sort-option">
+                <div class="sort-name">  
+                <div *ngIf="!sortOption.type">
+                    <img src='/assets/img/str.PNG' alt="" class="sort-direction sort-img"/>
+                </div>
+                <div *ngIf="sortOption.type">
+                    <img src='/assets/img/str.PNG' alt="" class="sort-direction sort-img sort-img-upsidedown"/>
+                </div>
+                <div>{{sortOption.name}}</div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="tags-block">
+    <div *ngFor='let tag of tags$ | async' class="tag">
+        <div *ngIf="(filteredTags$ | async).indexOf(tag)===-1">
+            <input type="checkbox" (click)="setFilterTag(tag)" class="tag-checkbox" id="{{tag}}"/>
+            <label class="tag-label-no-products" for="{{tag}}">{{tag}}</label>
+        </div>
+        <div *ngIf="(filteredTags$ | async).indexOf(tag)!==-1">
+            <input type="checkbox" (click)="setFilterTag(tag)" class="tag-checkbox" id="{{tag}}"/>
+            <label class="tag-label" for="{{tag}}">{{tag}}</label>
+        </div>
+    </div>
+</div>

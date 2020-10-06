@@ -4,8 +4,12 @@ import { Product } from '../../../../../app/core/models/product.model';
 import { ProductFilter } from 'src/app/core/models/product-filter.model';
 import { MainCategory } from 'src/app/core/models/main-category.model';
 import { SortOption } from 'src/app/core/models/sort-option.model';
-import { RatingEnum } from 'src/app/core/enums/product.enum';
-import { Subscription } from 'rxjs';
+import { BehaviorSubject, Observable, Subscription } from 'rxjs';
+import { map, shareReplay, take } from 'rxjs/operators';
+import { ProductFiltersComponent } from '../product-filters/product-filters.component';
+import { TagsSortComponent } from '../tags-sort/tags-sort.component';
+import { ProductItemsComponent } from '../product-items/product-items.component';
+
 import { RublePipe } from '../../../../../app/core/pipes/RublePipe.pipe';
 import { PennyPipe } from '../../../../../app/core/pipes/PennyPipe.pipe';
 
@@ -18,71 +22,116 @@ import { PennyPipe } from '../../../../../app/core/pipes/PennyPipe.pipe';
 
 export class ProductListComponent implements OnInit, OnDestroy{
   products: Product[] = [];
+  filteredProducts: Product[] = [];
   mainCategory: MainCategory;
-  showSortOptions = false;
   sortOptions: SortOption[] = [{name: 'По популярности', type: false},
                               {name: 'Цена по убыванию', type: false},
                               {name: 'Цена по возрастанию', type: true}];
   filters: ProductFilter = new ProductFilter();
-  possibleFilters: ProductFilter = new ProductFilter();
-  currentSortOption: SortOption = this.sortOptions[0];
-  ratingEnum = RatingEnum;
   subscriptions: Subscription = new Subscription();
 
-  constructor(public productService: ProductService) {}
+  constructor(public productService: ProductService) {  }
+
+  get products$(): Observable<Product[]> {
+    return this.productService.products$;
+  }
+
+  get filteredProducts$(): Observable<Product[]> {
+    return this.productService.filteredProducts$;
+  }
+
+  get brands$(): Observable<string[]>{
+    return this.productService.products$.pipe(
+      map(products => {
+        const unUniqbrands = products.filter((x: Product) => x.brand).map((x: Product) => x.brand);
+        return Array.from(new Set(unUniqbrands)); })
+    );
+  }
+
+  get countries$(): Observable<string[]>{
+    return this.productService.products$.pipe(
+      map(products => {
+        const unUniqCountries = products.filter((x: Product) => x.country).map((x: Product) => x.country);
+        return Array.from(new Set(unUniqCountries)); })
+    );
+  }
+
+  get tags$(): Observable<string[]>{
+    return this.productService.products$.pipe(
+      map(products => {
+        const unUniqTags = (products.filter((x: Product) => x.tags).map((x: Product) => x.tags));
+        return Array.from(new Set(unUniqTags.reduce((acc, val) => acc.concat(val), []))); })
+    );
+  }
+
+  get filteredBrands$(): Observable<string[]>{
+    return this.productService.filteredProducts$.pipe(
+      map(products => {
+        const unUniqbrands = products.filter((x: Product) => x.brand).map((x: Product) => x.brand);
+        return Array.from(new Set(unUniqbrands)); })
+    );
+  }
+
+  get filteredCountries$(): Observable<string[]>{
+    return this.productService.filteredProducts$.pipe(
+      map(products => {
+        const unUniqCountries = products.filter((x: Product) => x.country).map((x: Product) => x.country);
+        return Array.from(new Set(unUniqCountries)); })
+    );
+  }
+
+  get filteredTags$(): Observable<string[]>{
+    return this.productService.filteredProducts$.pipe(
+      map(products => {
+        const unUniqTags = (products.filter((x: Product) => x.tags).map((x: Product) => x.tags));
+        return Array.from(new Set(unUniqTags.reduce((acc, val) => acc.concat(val), []))); })
+    );
+  }
 
   ngOnInit(): void{
-    this.subscriptions.add(this.productService.getProducts().subscribe(data => this.products = data));
+    this.productService.getProducts();
     this.subscriptions.add(this.productService.getMainCategory().subscribe(data => this.mainCategory = data));
-    this.subscriptions.add(this.productService.getBrands().subscribe(data => this.possibleFilters.brand = data));
-    this.subscriptions.add(this.productService.getCountries().subscribe(data => this.possibleFilters.country = data));
-    this.subscriptions.add(this.productService.getTags().subscribe(data => this.possibleFilters.tags = data));
-    this.filters.sort = this.currentSortOption.name;
+    this.filters.sort = 'По популярности';
   }
 
-  setFilterDiscount(): void{
+  onFilterDiscount(): void{
     this.filters.discount = !this.filters.discount;
-    this.subscriptions.add(this.productService.getFilteredProducts(this.filters).subscribe(data => this.products = data));
+    this.productService.getFilteredProducts(this.filters);
   }
 
-  setFilterBrand(brand: string): void{
+  onFilterBrands(brand: string): void{
     if (this.filters.brand.indexOf(brand) === -1) {
       this.filters.brand.push(brand) ;
     }
     else {
       this.filters.brand = this.filters.brand.filter(item => item !== brand);
     }
-    this.subscriptions.add(this.productService.getFilteredProducts(this.filters).subscribe(data => this.products = data));
+    this.productService.getFilteredProducts(this.filters);
   }
 
-  setFilterCountry(country: string): void{
+  onFilterCountries(country: string): void{
     if (this.filters.country.indexOf(country) === -1) {
       this.filters.country.push(country) ;
     }
     else {
       this.filters.country = this.filters.country.filter(item => item !== country);
     }
-    this.subscriptions.add(this.productService.getFilteredProducts(this.filters).subscribe(data => this.products = data));
+    this.productService.getFilteredProducts(this.filters);
   }
 
-  setFilterTag(tag: string): void{
+  onFilterTag(tag: string): void{
     if (this.filters.tags.indexOf(tag) === -1) {
       this.filters.tags.push(tag);
     }
     else {
       this.filters.tags = this.filters.tags.filter(item => item !== tag);
     }
-    this.subscriptions.add(this.productService.getFilteredProducts(this.filters).subscribe(data => this.products = data));
+    this.productService.getFilteredProducts(this.filters);
   }
 
-  setShowSortOptions(): void{
-    this.showSortOptions = !this.showSortOptions;
-  }
-
-  setSortOption(option: SortOption): void{
-    this.currentSortOption = option;
-    this.filters.sort = this.currentSortOption.name;
-    this.subscriptions.add(this.productService.getFilteredProducts(this.filters).subscribe(data => this.products = data));
+  onSortOption(option: SortOption): void{
+    this.filters.sort = option.name;
+    this.productService.getFilteredProducts(this.filters);
   }
 
   ngOnDestroy(): void {
