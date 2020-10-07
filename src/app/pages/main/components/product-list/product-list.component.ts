@@ -4,14 +4,8 @@ import { Product } from '../../../../../app/core/models/product.model';
 import { ProductFilter } from 'src/app/core/models/product-filter.model';
 import { MainCategory } from 'src/app/core/models/main-category.model';
 import { SortOption } from 'src/app/core/models/sort-option.model';
-import { BehaviorSubject, Observable, Subscription } from 'rxjs';
-import { map, shareReplay, take } from 'rxjs/operators';
-import { ProductFiltersComponent } from '../product-filters/product-filters.component';
-import { TagsSortComponent } from '../tags-sort/tags-sort.component';
-import { ProductItemsComponent } from '../product-items/product-items.component';
-
-import { RublePipe } from '../../../../../app/core/pipes/RublePipe.pipe';
-import { PennyPipe } from '../../../../../app/core/pipes/PennyPipe.pipe';
+import { Observable, Subscription } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-product-list',
@@ -100,7 +94,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   }
 
   onFilterBrands(brand: string): void{
-    if (this.filters.brand.indexOf(brand) === -1) {
+    if (!this.filters.brand.includes(brand)) {
       this.filters.brand.push(brand) ;
     }
     else {
@@ -110,7 +104,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   }
 
   onFilterCountries(country: string): void{
-    if (this.filters.country.indexOf(country) === -1) {
+    if (!this.filters.country.includes(country)) {
       this.filters.country.push(country) ;
     }
     else {
@@ -120,7 +114,7 @@ export class ProductListComponent implements OnInit, OnDestroy{
   }
 
   onFilterTag(tag: string): void{
-    if (this.filters.tags.indexOf(tag) === -1) {
+    if (!this.filters.tags.includes(tag)) {
       this.filters.tags.push(tag);
     }
     else {

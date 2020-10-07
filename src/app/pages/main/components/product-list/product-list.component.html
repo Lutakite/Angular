@@ -5,7 +5,14 @@
 
   <div class="items-block">
 
-    <app-tags-sort [tags$]="tags$" [filteredTags$]="filteredTags$" [mainCategory]="mainCategory" [sortOptions]="sortOptions" (filterTags)="onFilterTag($event)" (filterSort)="onSortOption($event)"></app-tags-sort>
+    <app-tags-sort [tags$]="tags$"
+    [filteredTags$]="filteredTags$"
+    [mainCategory]="mainCategory"
+    [sortOptions]="sortOptions"
+    [filters]="filters"
+    (filterTags)="onFilterTag($event)"
+    (filterSort)="onSortOption($event)">
+    </app-tags-sort>
     
     <app-product-items [products$]="filteredProducts$"></app-product-items>
     

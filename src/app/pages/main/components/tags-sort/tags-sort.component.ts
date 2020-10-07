@@ -1,6 +1,7 @@
 import { Component, OnInit, ChangeDetectionStrategy, Input, Output, EventEmitter } from '@angular/core';
 import { MainCategory } from 'src/app/core/models/main-category.model';
 import { SortOption } from 'src/app/core/models/sort-option.model';
+import { ProductFilter } from 'src/app/core/models/product-filter.model';
 import { Observable } from 'rxjs';
 
 @Component({
@@ -16,6 +17,7 @@ export class TagsSortComponent implements OnInit{
   @Input() filteredTags$: Observable<string[]>;
   @Input() mainCategory: MainCategory;
   @Input() sortOptions: SortOption[];
+  @Input() filters: ProductFilter;
   @Output() filterSort: EventEmitter<SortOption> = new EventEmitter();
   @Output() filterTags: EventEmitter<string> = new EventEmitter();
   showSortOptions = false;

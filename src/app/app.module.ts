@@ -9,8 +9,8 @@ import { ProductItemsComponent} from './pages/main/components/product-items/prod
 import { TagsSortComponent } from './pages/main/components/tags-sort/tags-sort.component';
 import { ProductService } from './core/services/product.service';
 import { HttpClientModule } from '@angular/common/http';
-import { RublePipe } from './core/pipes/RublePipe.pipe';
-import { PennyPipe } from './core/pipes/PennyPipe.pipe';
+import { RublePipe } from './core/pipes/ruble.pipe';
+import { PennyPipe } from './core/pipes/penny.pipe';
 
 @NgModule({
   declarations: [

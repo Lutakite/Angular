@@ -1,9 +1,9 @@
-@font-face {
+@font-face  {
     font-family:"Rotonda";
     src: url("/assets/fonts/rotonda.ttf") format("truetype");
 }
 
-.category-name{
+.category-name {
     color: #043e44;
     font-weight: bold;
     font-size: 22px;
@@ -11,7 +11,7 @@
     position: relative;
 }
 
-.sort-btn{
+.sort-btn {
     background-color: white;
     position: absolute;
     z-index: 1;
@@ -26,63 +26,63 @@
     justify-content: center;
 }
 
-.sort-option{
+.sort-option {
     padding: 7px 0;
     border-top: 1px solid rgb(216, 216, 216);
 }
 
-.cur-sort{
+.cur-sort {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 7px;
 }
 
-.sort-direction{
+.sort-direction {
     margin-right: 5px;
 }
 
-.sort-img{
+.sort-img {
     height: 16px;
 }
 
-.sort-img-upsidedown{
+.sort-img-upsidedown {
     transform: rotate(180deg);
 }
 
 
-.sort-name{
+.sort-name {
     display: flex;
 }
 
-.tags-block{
+.tags-block {
     display: flex;
     flex-wrap: wrap;
 }
 
-.tag-checkbox {
+.tag-checkbox  {
     display: none;
 }
 
-.tag{ 
+.tag { 
     margin: 15px 10px 20px 0px;
 }
 
-.tag-label{
+.tag-label {
     color: #043e44;
     padding: 5px;
     border-radius: 10px;
     border: 1px solid rgb(216, 216, 216);
 }
 
-.tag-label-no-products{
+.tag-label-no-products {
     color: rgb(233, 233, 233);
     padding: 5px;
     border-radius: 10px;
     border: 1px solid rgb(233, 233, 233);
 }
 
-.tag-checkbox:checked + label {
+.tag-checkbox:checked + label  {
     color: #fff;
     background: #919fa7;
 }

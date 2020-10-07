@@ -12,6 +12,7 @@ export class ProductService {
   readonly products$ = this._products$.asObservable().pipe(
     shareReplay(1)
   );
+
   private readonly _filteredProducts$ = new BehaviorSubject<Product[]>([]);
   readonly filteredProducts$ = this._filteredProducts$.asObservable().pipe(
     shareReplay(1)
@@ -31,7 +32,10 @@ export class ProductService {
           return 1;
         });
       })
-    ).subscribe(data => {this._products$.next(data); this._filteredProducts$.next(data); });
+    ).subscribe(data => {
+      this._products$.next(data);
+      this._filteredProducts$.next(data);
+    });
   }
 
   getMainCategory(): Observable<MainCategory> {
@@ -43,20 +47,18 @@ export class ProductService {
   }
 
   getFilteredProducts(productFilter: ProductFilter): void {
-    console.log('here');
-    console.log(productFilter.discount);
     let filteredSortedProducts = this._products$.value.
         filter((product: Product) => (!productFilter.discount || !!product.discount))
-        .filter((product: Product) => (!productFilter.brand || productFilter.brand.length === 0 ||
-          productFilter.brand.indexOf(product.brand) !== -1))
-        .filter((product: Product) => (!productFilter.country || productFilter.country.length === 0
-          || productFilter.country.indexOf(product.country) !== -1))
-        .filter((product: Product) => (!productFilter.tags || productFilter.tags.length === 0 ||
+        .filter((product: Product) => (!productFilter.brand || !productFilter.brand.length ||
+          productFilter.brand.includes(product.brand)))
+        .filter((product: Product) => (!productFilter.country || !productFilter.country.length ||
+          productFilter.country.includes(product.country)))
+        .filter((product: Product) => (!productFilter.tags || !productFilter.tags.length ||
           [...new Set(product.tags)].filter((item: string) => productFilter.tags.includes(item)).length === productFilter.tags.length ));
     if (productFilter.sort === 'Цена по убыванию') {
       filteredSortedProducts = filteredSortedProducts.sort((prev: Product, next: Product) => {
-        const prevPrice = (prev.discount === true) ? prev.priceDiscount : prev.price;
-        const nextPrice = (next.discount === true) ? next.priceDiscount : next.price;
+        const prevPrice = prev.discount ? prev.priceDiscount : prev.price;
+        const nextPrice = next.discount ? next.priceDiscount : next.price;
         return (nextPrice - prevPrice);
       });
     }
@@ -71,8 +73,8 @@ export class ProductService {
     }
     if (productFilter.sort === 'Цена по возрастанию') {
       filteredSortedProducts = filteredSortedProducts.sort((prev: Product, next: Product) => {
-        const prevPrice = (prev.discount === true) ? prev.priceDiscount : prev.price;
-        const nextPrice = (next.discount === true) ? next.priceDiscount : next.price;
+        const prevPrice = prev.discount ? prev.priceDiscount : prev.price;
+        const nextPrice = next.discount ? next.priceDiscount : next.price;
         return (prevPrice - nextPrice);
       });
     }
