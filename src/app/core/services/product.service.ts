@@ -3,25 +3,31 @@ import { HttpClient } from '@angular/common/http';
 import { Product } from '../models/product.model';
 import { ProductFilter } from '../models/product-filter.model';
 import { MainCategory } from '../models/main-category.model';
-import { BehaviorSubject, Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
+import { Observable, of } from 'rxjs';
+import { map } from 'rxjs/operators';
+import { select, Store } from '@ngrx/store';
+import { GetProductsResponseInterface } from '../models/get-products-response.interface';
+import { allProductsSelector } from '../store/selectors';
 
 @Injectable()
 export class ProductService {
-  private readonly _products$ = new BehaviorSubject<Product[]>([]);
-  readonly products$ = this._products$.asObservable().pipe(
-    shareReplay(1)
-  );
 
-  private readonly _filteredProducts$ = new BehaviorSubject<Product[]>([]);
-  readonly filteredProducts$ = this._filteredProducts$.asObservable().pipe(
-    shareReplay(1)
-  );
+  private products: Product[] | null;
+  productsSubscription = this.store.
+    pipe(select(allProductsSelector))
+    .subscribe((products: Product[] | null) => {
+        this.products = products;
+    });
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private store: Store) { }
 
-  getProducts(): void {
-    this.http.get('../../assets/data/product-types.json').pipe(
+
+  setFilter(filter: ProductFilter): ProductFilter {
+    return filter;
+  }
+
+  getProducts(): Observable<Product[]> {
+    return this.http.get<GetProductsResponseInterface>('../../assets/data/product-types.json').pipe(
       map(data => {
         const x = 'products';
         return data[x].sort((prev: Product, next: Product) => {
@@ -32,10 +38,7 @@ export class ProductService {
           return 1;
         });
       })
-    ).subscribe(data => {
-      this._products$.next(data);
-      this._filteredProducts$.next(data);
-    });
+    );
   }
 
   getMainCategory(): Observable<MainCategory> {
@@ -46,9 +49,9 @@ export class ProductService {
     );
   }
 
-  getFilteredProducts(productFilter: ProductFilter): void {
-    let filteredSortedProducts = this._products$.value.
-        filter((product: Product) => (!productFilter.discount || !!product.discount))
+  getFilteredProducts(productFilter: ProductFilter): Observable<Product[]> {
+    let filteredSortedProducts = this.products
+        .filter((product: Product) => (!productFilter.discount || !!product.discount))
         .filter((product: Product) => (!productFilter.brand || !productFilter.brand.length ||
           productFilter.brand.includes(product.brand)))
         .filter((product: Product) => (!productFilter.country || !productFilter.country.length ||
@@ -78,6 +81,6 @@ export class ProductService {
         return (prevPrice - nextPrice);
       });
     }
-    this._filteredProducts$.next(filteredSortedProducts);
+    return of(filteredSortedProducts);
   }
 }
